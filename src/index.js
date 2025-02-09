@@ -81,8 +81,7 @@ app.put('/users/:id', (req, res) => {
 
     // handle error if user id not in userData
     if (!user){
-        res.status(404)
-        .json({"Error": `User Not Found with id ${userId}`});
+        return res.status(404).json({ message: `User Not Found with id ${userId}`});
     }
 
     const {userName, techStack} = req.body
@@ -98,7 +97,7 @@ app.delete('/users/:id', (req, res) =>{
     const userPosition = userData.findIndex(data => data.tokenId === userId)
 
     if (userPosition === -1){
-        res.status(404).json({"Error": "You couldn't delete this user because we don't have this user hahhahah...."})
+        return res.status(404).json({ message: "You couldn't delete this user because we don't have this user hahhahah...."})
     }
     
     userData.splice(userPosition, 1);
