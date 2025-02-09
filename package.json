@@ -1,0 +1,26 @@
+{
+  "name": "express-crud-operation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "Express",
+    "backend",
+    "CRUD operation"
+  ],
+  "author": "Jay veer",
+  "license": "MIT",
+  "description": "Express CRUD operation projects",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
